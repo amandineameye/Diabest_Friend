@@ -1,0 +1,126 @@
+{
+  "meals": [
+    {
+      "id": "44a4",
+      "carbsTypes": [
+        {
+          "carb": "Brown bread",
+          "grams": "90"
+        }
+      ],
+      "carbsWeight": 42.3,
+      "preMealBloodSugar": "75",
+      "bolus": 3,
+      "firstMeal": true,
+      "preMealPhysicalActivity": true,
+      "postMealBloodSugar": "88",
+      "postMealPhysicalActivity": true
+    },
+    {
+      "id": "a2d0",
+      "carbsTypes": [
+        {
+          "carb": "Spelt penne (cooked)",
+          "grams": "116"
+        },
+        {
+          "carb": "Ratatouille",
+          "grams": "150"
+        }
+      ],
+      "carbsWeight": 34.18,
+      "preMealBloodSugar": "120",
+      "bolus": 3,
+      "firstMeal": true,
+      "preMealPhysicalActivity": false,
+      "postMealBloodSugar": "250",
+      "postMealPhysicalActivity": false
+    },
+    {
+      "id": "9324",
+      "carbsTypes": [
+        {
+          "carb": "Croissant",
+          "grams": "114"
+        }
+      ],
+      "carbsWeight": 52.44,
+      "preMealBloodSugar": "181",
+      "bolus": 8,
+      "firstMeal": true,
+      "preMealPhysicalActivity": false
+    }
+  ],
+  "carbsOptions": [
+    {
+      "id": "White rice (cooked)",
+      "name": "White rice (cooked)",
+      "percentage": 0.31
+    },
+    {
+      "id": "White rice (raw)",
+      "name": "White rice (raw)",
+      "percentage": 0.79
+    },
+    {
+      "id": "Spelt penne (raw)",
+      "name": "Spelt penne (raw)",
+      "percentage": 0.7
+    },
+    {
+      "id": "Spelt penne (cooked)",
+      "name": "Spelt penne (cooked)",
+      "percentage": 0.23
+    },
+    {
+      "id": "Brown bread",
+      "name": "Brown bread",
+      "percentage": 0.47
+    },
+    {
+      "id": "White bread",
+      "name": "White bread",
+      "percentage": 0.49
+    },
+    {
+      "id": "Potatoes",
+      "name": "Potatoes",
+      "percentage": 0.18
+    },
+    {
+      "id": "Sweet potatoes",
+      "name": "Sweet potatoes",
+      "percentage": 0.23
+    },
+    {
+      "id": "Ratatouille",
+      "name": "Ratatouille",
+      "percentage": 0.05
+    },
+    {
+      "id": "Zucchini",
+      "name": "Zucchini",
+      "percentage": 0.03
+    },
+    {
+      "id": "Paprika (cooked)",
+      "name": "Paprika (cooked)",
+      "percentage": 0.06
+    },
+    {
+      "id": "Tomatoes (raw)",
+      "name": "Tomatoes (raw)",
+      "percentage": 0.04
+    },
+    {
+      "id": "Tomatoes (cooked)",
+      "name": "Tomatoes (cooked)",
+      "percentage": 0.05
+    },
+    {
+      "id": "Croissant",
+      "name": "Croissant",
+      "percentage": 0.46
+    }
+  ]
+}

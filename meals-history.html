@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./styles/main.css" />
+		<link rel="stylesheet" href="./styles/meals-history.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="icon" type="image/x-icon" href="./images/blood-drop.png" />
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script defer src="./scripts/meals-history.js"></script>
+		<title>Meals history</title>
+	</head>
+	<body>
+		<header>
+			<a class="arrow-link" href="./index.html"
+				><img src="./images/back.png" alt="back arrow"
+			/></a>
+			<a class="title" href="./index.html"><h1>Diabest Friend</h1></a>
+			<a class="logo" href="./index.html"
+				><img src="./images/blood-drop.png" alt="blood drop"
+			/></a>
+		</header>
+		<main>
+			<div class="filters">
+				<div class="selects">
+					<select name="meal-category" id="meal-category">
+						<option selected value="most-recent">Most recent</option>
+						<option value="right-units">Right units</option>
+						<option value="too-many">Too many units</option>
+						<option value="too-few">Too few units</option>
+					</select>
+					<select name="carb" id="carb">
+						<option selected value="all">All carbs</option>
+					</select>
+					<select name="carbs-range" id="carbs-range">
+						<option selected value="all">All carbs weights</option>
+						<option value="0-20">0 - 20 grams</option>
+						<option value="21-40">21 - 40 grams</option>
+						<option value="41-60">41 - 60 grams</option>
+						<option value="61-80">61 - 80 grams</option>
+						<option value="more">More than 80 grams</option>
+					</select>
+				</div>
+
+				<div class="checkboxes">
+					<div class="checkbox">
+						<input
+							type="checkbox"
+							name="only-first-meals"
+							id="only-first-meals"
+						/>
+						<label for="only-first-meals">Only first meals</label>
+					</div>
+					<div class="checkbox">
+						<input
+							type="checkbox"
+							name="include-first-meals"
+							id="include-first-meals"
+						/>
+						<label for="exclude-first-meals">Exclude first meals</label>
+					</div>
+					<div class="checkbox">
+						<input
+							type="checkbox"
+							name="exclude-physical-activity-meals"
+							id="exclude-physical-activity-meals"
+						/>
+						<label for="exclude-physical-activity-meals"
+							>Exclude physical activity meals</label
+						>
+					</div>
+				</div>
+			</div>
+			<div class="main-container">
+				<div class="unfinished">
+					<h3>Last meal</h3>
+					<form name="lastData" autocomplete="off">
+						<div class="post-meal-sugar">
+							<p>Post-meal blood sugar</p>
+							<input type="text" name="postMealSugar" id="postMealSugar" />
+							<label for="postMealSugar">mg/dL</label>
+						</div>
+						<div class="physical-activity2">
+							<input
+								type="checkbox"
+								name="physicalActivity2"
+								id="physicalActivity2"
+							/>
+							<label for="physicalActivity2">Physical activity</label>
+						</div>
+						<img src="./images/checked.png" id="checked" alt="checked" />
+					</form>
+				</div>
+				<div class="card">
+					<h3>White rice & ratatouille</h3>
+					<div class="card-data">
+						<p>White rice</p>
+						<p>100</p>
+					</div>
+					<div class="card-data">
+						<p>Ratatouille</p>
+						<p>120</p>
+					</div>
+					<div class="card-data">
+						<p>Bolus</p>
+						<p>6</p>
+					</div>
+					<div class="card-data">
+						<p>Sugar change</p>
+						<p>+ 20</p>
+					</div>
+					<div class="card-data">
+						<p>Carbs</p>
+						<p>83 g</p>
+					</div>
+				</div>
+				<div class="card">
+					<h3>White rice & ratatouille</h3>
+					<div class="card-data">
+						<p>White rice</p>
+						<p>100</p>
+					</div>
+					<div class="card-data">
+						<p>Ratatouille</p>
+						<p>120</p>
+					</div>
+					<div class="card-data">
+						<p>Bolus</p>
+						<p>6</p>
+					</div>
+					<div class="card-data">
+						<p>Sugar change</p>
+						<p>+ 20</p>
+					</div>
+					<div class="card-data">
+						<p>Carbs</p>
+						<p>83 g</p>
+					</div>
+				</div>
+				<div class="card">
+					<h3>White rice & ratatouille</h3>
+					<div class="card-data">
+						<p>White rice</p>
+						<p>100</p>
+					</div>
+					<div class="card-data">
+						<p>Ratatouille</p>
+						<p>120</p>
+					</div>
+					<div class="card-data">
+						<p>Bolus</p>
+						<p>6</p>
+					</div>
+					<div class="card-data">
+						<p>Sugar change</p>
+						<p>+ 20</p>
+					</div>
+					<div class="card-data">
+						<p>Carbs</p>
+						<p>83 g</p>
+					</div>
+				</div>
+				<div class="card">
+					<h3>White rice & ratatouille</h3>
+					<div class="card-data">
+						<p>White rice</p>
+						<p>100</p>
+					</div>
+					<div class="card-data">
+						<p>Ratatouille</p>
+						<p>120</p>
+					</div>
+					<div class="card-data">
+						<p>Bolus</p>
+						<p>6</p>
+					</div>
+					<div class="card-data">
+						<p>Sugar change</p>
+						<p>+ 20</p>
+					</div>
+					<div class="card-data">
+						<p>Carbs</p>
+						<p>83 g</p>
+					</div>
+				</div>
+				<div class="card">
+					<h3>White rice & ratatouille</h3>
+					<div class="card-data">
+						<p>White rice</p>
+						<p>100</p>
+					</div>
+					<div class="card-data">
+						<p>Ratatouille</p>
+						<p>120</p>
+					</div>
+					<div class="card-data">
+						<p>Bolus</p>
+						<p>6</p>
+					</div>
+					<div class="card-data">
+						<p>Sugar change</p>
+						<p>+ 20</p>
+					</div>
+					<div class="card-data">
+						<p>Carbs</p>
+						<p>83 g</p>
+					</div>
+				</div>
+				<div class="card">
+					<h3>White rice & ratatouille</h3>
+					<div class="card-data">
+						<p>White rice</p>
+						<p>100</p>
+					</div>
+					<div class="card-data">
+						<p>Ratatouille</p>
+						<p>120</p>
+					</div>
+					<div class="card-data">
+						<p>Bolus</p>
+						<p>6</p>
+					</div>
+					<div class="card-data">
+						<p>Sugar change</p>
+						<p>+ 20</p>
+					</div>
+					<div class="card-data">
+						<p>Carbs</p>
+						<p>83 g</p>
+					</div>
+				</div>
+				<div class="card">
+					<h3>White rice & ratatouille</h3>
+					<div class="card-data">
+						<p>White rice</p>
+						<p>100</p>
+					</div>
+					<div class="card-data">
+						<p>Ratatouille</p>
+						<p>120</p>
+					</div>
+					<div class="card-data">
+						<p>Bolus</p>
+						<p>6</p>
+					</div>
+					<div class="card-data">
+						<p>Sugar change</p>
+						<p>+ 20</p>
+					</div>
+					<div class="card-data">
+						<p>Carbs</p>
+						<p>83 g</p>
+					</div>
+				</div>
+				<div class="card">
+					<h3>White rice & ratatouille</h3>
+					<div class="card-data">
+						<p>White rice</p>
+						<p>100</p>
+					</div>
+					<div class="card-data">
+						<p>Ratatouille</p>
+						<p>120</p>
+					</div>
+					<div class="card-data">
+						<p>Bolus</p>
+						<p>6</p>
+					</div>
+					<div class="card-data">
+						<p>Sugar change</p>
+						<p>+ 20</p>
+					</div>
+					<div class="card-data">
+						<p>Carbs</p>
+						<p>83 g</p>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<p>© 2024 by Amandine Ameye</p>
+		</footer>
+	</body>
+</html>

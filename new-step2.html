@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>New meal</title>
+        <link rel="stylesheet" href="./styles/main.css">
+        <link rel="stylesheet" href="./styles/new-step2.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+			rel="stylesheet"
+		/>
+        <link rel="icon" type="image/x-icon" href="./images/blood-drop.png" />
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script defer src="./scripts/new-step2.js"></script>
+	</head>
+	<body>
+        <body>
+            <header>
+                <!-- <a class="arrow-link" href="./new-step1.html"><img src="./images/back.png" alt="back arrow"></a> -->
+                <a class="title" href="./index.html"><h1>Diabest Friend</h1></a>
+                <a class="logo" href="./index.html"><img src="./images/blood-drop.png" alt="blood drop" /></a>
+            </header>
+            <main>
+                <h2>Step 2</h2>
+                <div class="main-container">
+                    <div class="tables">
+                        <div class="carbs-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Carbs</th>
+                                        <th>Total</th>
+                                        <th>%</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>White rice</td>
+                                        <td>46</td>
+                                        <td>60</td>
+                                        <td>77</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ratatouille</td>
+                                        <td>5</td>
+                                        <td>100</td>
+                                        <td>5</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td>Total carbs</td>
+                                        <td colspan="1">51 g</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            
+                        </div>
+                        <div class="bolus-table">
+                            <form name="bolusTable" autocomplete="off">
+                                <div class="left">
+                                    <div class="labels">
+                                        <p>Blood sugar</p>
+                                        <p>Meal units</p>
+                                        <p>Correction units</p>
+                                    </div>
+                                    <div class="inputs">
+                                        <div>
+                                            <input type="text" name="bloodSugar" pattern="^(?:500|\d{1,2}|[1-4]\d{2})$" required>
+                                            <p>mg/dL</p>
+                                        </div>
+                                        <div>
+                                            <input type="text" name="mealUnits" pattern="^(?:1[0-5]|\d)$" required>
+                                            <p>units</p>
+                                        </div>
+                                        <div>
+                                            <input type="text" name="correctionUnits" pattern="^(?:1[0-5]|\d)$" required>
+                                            <p>units</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div>
+                                        <input type="checkbox" name="firstMeal" id="firstMeal">
+                                        <label for="firstMeal">First meal</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="physicalActivity" id="physicalActivity">
+                                        <label for="physicalActivity">Physical activity</label>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="final-bolus">
+                                <p>Total bolus</p>
+                                <div></div>
+                                <p>units</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carbs-cards">
+                        <div class="card">
+                            <h3>White rice & ratatouille</h3>
+                            <div class="carbs-div">
+                                <div class="card-data">
+                                <p>White rice</p>
+                                <p>100</p>
+                                </div>
+                                <div class="card-data">
+                                <p>Ratatouille</p>
+                                <p>120</p>
+                                </div>
+                            </div>
+                            <div class="rest-div">
+                                <div class="card-data">
+                                <p>Bolus</p>
+                                <p>6</p></div>
+                            <div class="card-data">
+                                <p>Sugar change</p>
+                                <p>+ 20</p></div>
+                            <div class="card-data">
+                                <p>Carbs</p>
+                                <p>83 g</p></div>
+                            </div>
+                            <img src="./images/sport.png" alt="sport" class="sport">
+                            <img src="./images/morning.png" alt="morning" class="morning">
+                        </div>
+                        <div class="card">
+                            <h3>White rice & ratatouille</h3>
+                            <div class="carbs-div">
+                                <div class="card-data">
+                                <p>White rice</p>
+                                <p>100</p>
+                                </div>
+                                <div class="card-data">
+                                <p>Ratatouille</p>
+                                <p>120</p>
+                                </div>
+                            </div>
+                            <div class="rest-div">
+                                <div class="card-data">
+                                <p>Bolus</p>
+                                <p>6</p></div>
+                            <div class="card-data">
+                                <p>Sugar change</p>
+                                <p>+ 20</p></div>
+                            <div class="card-data">
+                                <p>Carbs</p>
+                                <p>83 g</p></div>
+                            </div>
+                            <img src="./images/sport.png" alt="sport" class="sport">
+                            <img src="./images/morning.png" alt="morning" class="morning">
+                        </div>
+                        <div class="card">
+                            <h3>White rice & ratatouille</h3>
+                            <div class="carbs-div">
+                                <div class="card-data">
+                                <p>White rice</p>
+                                <p>100</p>
+                                </div>
+                                <div class="card-data">
+                                <p>Ratatouille</p>
+                                <p>120</p>
+                                </div>
+                            </div>
+                            <div class="rest-div">
+                                <div class="card-data">
+                                <p>Bolus</p>
+                                <p>6</p></div>
+                            <div class="card-data">
+                                <p>Sugar change</p>
+                                <p>+ 20</p></div>
+                            <div class="card-data">
+                                <p>Carbs</p>
+                                <p>83 g</p></div>
+                            </div>
+                            <img src="./images/sport.png" alt="sport" class="sport">
+                            <img src="./images/morning.png" alt="morning" class="morning">
+                        </div>
+                    </div>
+                </div>
+                <a id="thumb">
+                    <img src="./images/thumbs-up.png" alt="thumbs up">
+                </a>
+                <div class="modal hidden">
+                    <div class="message">
+                        <span id="close">x</span>
+                        <p>You must fill in correctly all the table's inputs to continue.</p>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <p>© 2024 by Amandine Ameye</p>
+            </footer>
+    </body>
+</html>

@@ -1,0 +1,422 @@
+header {
+	.arrow-link {
+		img {
+			position: absolute;
+			top: calc(2.5rem - 17px);
+			left: 2.2rem;
+			height: 2rem;
+		}
+	}
+	.logo {
+		img {
+			height: 2.2rem;
+			position: absolute;
+			top: 23px;
+			right: calc(50vw - 160px);
+		}
+	}
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+
+	.main-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		gap: 2rem;
+
+		.tables {
+			/* width: 100%; */
+			display: flex;
+			justify-content: space-between;
+			gap: 2rem;
+
+			.carbs-table {
+				/* width: 48%; */
+				width: 44rem;
+				height: 20rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 1.5rem;
+				background-color: var(--darkestBlue);
+				color: var(--powder);
+				box-shadow: var(--shadow);
+
+				table {
+					width: 90%;
+					height: 90%;
+					border-collapse: collapse;
+
+					th,
+					td {
+						text-align: center;
+						vertical-align: center;
+
+						&:first-child {
+							border-right: solid 1px var(--powder);
+						}
+					}
+
+					thead {
+						width: 100%;
+						height: 25%;
+
+						tr {
+							border-bottom: solid 1px var(--powder);
+						}
+					}
+
+					tbody {
+						td {
+							&:nth-child(3) {
+								color: var(--number1);
+							}
+						}
+					}
+
+					tfoot {
+						width: 100%;
+						height: 25%;
+
+						tr {
+							border-top: solid 1px var(--powder);
+
+							td {
+								&:last-child {
+									color: var(--number2);
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.bolus-table {
+				/* width: 48%; */
+				width: 44rem;
+				height: 20rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+				align-items: center;
+				border-radius: 1.5rem;
+				background-color: var(--darkestBlue);
+				color: var(--powder);
+				box-shadow: var(--shadow);
+
+				form {
+					width: 90%;
+					height: 60%;
+					display: flex;
+					justify-content: space-evenly;
+
+					.left {
+						height: 100%;
+						display: flex;
+
+						input {
+							text-align: center;
+						}
+
+						.labels {
+							width: 50%;
+							display: flex;
+							flex-direction: column;
+							justify-content: space-evenly;
+						}
+
+						.inputs {
+							width: 50%;
+							display: flex;
+							flex-direction: column;
+							justify-content: space-evenly;
+							div {
+								display: flex;
+								gap: 1rem;
+								input {
+									width: 3rem;
+									height: 1.5rem;
+									border-radius: 1rem;
+								}
+							}
+						}
+					}
+					.right {
+						height: 100%;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						gap: 1.5rem;
+					}
+				}
+
+				.final-bolus {
+					display: flex;
+					gap: 1rem;
+
+					div {
+						width: 3rem;
+						height: 1.5rem;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						background-color: var(--powder);
+						border-radius: 1rem;
+						color: var(--darkestBlue);
+					}
+				}
+			}
+		}
+
+		.carbs-cards {
+			width: 90rem;
+			display: flex;
+			justify-content: space-between;
+
+			.card {
+				width: 28rem;
+				height: 12rem;
+				display: flex;
+				flex-wrap: wrap;
+				align-content: space-evenly;
+				border-radius: 1.5rem;
+				color: var(--darkestBlue);
+				box-shadow: var(--shadow);
+				border: solid 2px var(--darkestBlue);
+				flex-shrink: 0;
+				position: relative;
+				h3 {
+					width: 100%;
+					height: 24%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					border-bottom: solid 2px var(--darkestBlue);
+				}
+
+				.sport {
+					height: 1.2rem;
+					position: absolute;
+					top: 1rem;
+					left: 1rem;
+				}
+
+				.morning {
+					height: 1.2rem;
+					position: absolute;
+					top: 1rem;
+					right: 1rem;
+				}
+
+				.carbs-div {
+					height: 38%;
+					width: 100%;
+					display: flex;
+					justify-content: space-evenly;
+					align-items: center;
+
+					.card-data {
+						height: 35%;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+						gap: 0.2rem;
+						p {
+							&:nth-child(2) {
+								color: var(--number1);
+							}
+						}
+					}
+				}
+
+				.rest-div {
+					height: 38%;
+					width: 100%;
+					display: flex;
+					justify-content: space-evenly;
+					align-items: center;
+					.card-data {
+						height: 35%;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+						gap: 0.2rem;
+
+						&:last-child {
+							p {
+								&:last-child {
+									color: var(--number2);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	a {
+		img {
+			height: 3rem;
+			cursor: pointer;
+		}
+	}
+}
+
+@media (max-width: 1650px) {
+	main {
+		.main-container {
+			.tables {
+				.carbs-table {
+					width: 40rem;
+				}
+				.bolus-table {
+					width: 40rem;
+				}
+			}
+			.carbs-cards {
+				max-width: 82rem;
+				.card {
+					width: 26rem;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1450px) {
+	main {
+		.main-container {
+			.tables {
+				.carbs-table {
+					width: 35rem;
+				}
+				.bolus-table {
+					width: 35rem;
+				}
+			}
+			.carbs-cards {
+				max-width: 72rem;
+				.card {
+					width: 22rem;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1300px) {
+	main {
+		h2 {
+			margin: 2.5rem 0;
+		}
+		.main-container {
+			.tables {
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-between;
+			}
+			.carbs-cards {
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-between;
+				gap: 2rem;
+
+				.card {
+					width: 35rem;
+					height: 13rem;
+				}
+			}
+		}
+	}
+	a {
+		margin: 2.5rem 0;
+	}
+}
+
+@media (max-width: 650px) {
+	main {
+		.main-container {
+			.tables {
+				.bolus-table {
+					width: 30rem;
+					form {
+						flex-direction: column;
+						justify-content: space-between;
+						align-items: center;
+
+						.right {
+							gap: 0.5rem;
+						}
+					}
+				}
+				.carbs-table {
+					width: 30rem;
+				}
+			}
+			.carbs-cards {
+				.card {
+					width: 30rem;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 550px) {
+	main {
+		.main-container {
+			.tables {
+				.bolus-table {
+					width: 25rem;
+				}
+				.carbs-table {
+					width: 25rem;
+				}
+			}
+			.carbs-cards {
+				.card {
+					width: 25rem;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 450px) {
+	main {
+		.main-container {
+			.tables {
+				.carbs-table {
+					font-size: 0.9rem;
+				}
+				.bolus-table {
+					font-size: 0.9rem;
+				}
+			}
+			.carbs-cards {
+				.card {
+					font-size: 0.9rem;
+				}
+			}
+		}
+	}
+}
+
+@media (max-height: 900px) {
+	main {
+		h2 {
+			margin: 2.5rem 0;
+		}
+		a {
+			margin: 2.5rem 0;
+		}
+	}
+}
