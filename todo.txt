@@ -1,0 +1,7 @@
+MEALS HISTORY
+
+- Add delete button to meals
+
+GENERAL
+
+- Add time to the meal + to when I checked my bloodSugar rate afterwards 

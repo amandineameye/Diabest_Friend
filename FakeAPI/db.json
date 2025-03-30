@@ -49,6 +49,19 @@
       "bolus": 8,
       "firstMeal": true,
       "preMealPhysicalActivity": false
+    },
+    {
+      "id": "9a10",
+      "carbsTypes": [
+        {
+          "carb": "Spelt penne (raw)",
+          "grams": "50"
+        },
+        {
+          "carb": "Tomatoes (raw)",
+          "grams": "50"
+        }
+      ]
     }
   ],
   "carbsOptions": [
